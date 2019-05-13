@@ -10,7 +10,7 @@ then
   # build
   VERSION=$VERSION
 
-  echo "Releasing $VERSION ..."
+  echo "Releasing $VERSION ......"
 
   npm version $VERSION --message "[release] $VERSION"
 
