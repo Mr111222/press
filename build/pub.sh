@@ -12,7 +12,11 @@ git commit -m $var
 #4.
 git remote add origin https://github.com/Mr111222/express1.git
 #5.
-git push -u origin master
+echo "输入分支"
+
+read $branch
+
+git push -u origin branch
 
 sleep 2
 
