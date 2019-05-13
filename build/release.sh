@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 set -e
 
-git checkout master
-git merge dev
+# git checkout master
+# git merge dev
 
 VERSION=`npx select-version-cli`
 
@@ -13,7 +13,7 @@ then
   echo "Releasing $VERSION ..."
 
   # build
-  VERSION=$VERSION npm run dist
+  # VERSION=$VERSION npm run dist
 
   # publish theme
   echo "Releasing theme-chalk $VERSION ..."

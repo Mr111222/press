@@ -1,6 +1,6 @@
 {
   "name": "scasdasd",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -16,7 +16,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node index.js",
     "pub": "sh build/git-release.sh && sh build/release.sh && sh build/deploy-faas.sh",
-    "pub1": "sh build/pub.sh"
+    "push": "sh build/pub.sh"
   },
   "repository": {
     "type": "git",

@@ -12,7 +12,7 @@ git commit -m $var
 #4.
 git remote add origin https://github.com/Mr111222/express1.git
 #5.
-git push -u origin test
+git push -u origin master
 
 sleep 1
 clear || cls
