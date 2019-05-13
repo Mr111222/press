@@ -2,6 +2,7 @@
 set -e
 
 git checkout master
+
 git merge dev
 
 git push origin master
@@ -27,8 +28,14 @@ then
   fi
 fi
 
+git push origin master
+
 sleep 2
 
 clear || cls
 
-# git push origin master
+git checkout dev 
+
+
+
+
