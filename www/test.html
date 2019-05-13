@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+	<div class="box" style="width:200px;height: 200px; margin:0 auto;">
+		<div>
+			<textarea name="" id="htmls" cols="30" rows="10"></textarea>	
+		</div>
+		<div>
+			<button id="btn">点击</button>
+		</div>
+		<div>
+			<textarea name="" id="react" cols="30" rows="10"></textarea>	
+		</div>
+	</div>
+	<div id="box" style="width:200px;height: 200px; margin:0 auto;">
+		<input type="text" id="inps" v-model="name">
+		<p id="ps">姓名：{{name}}</p>
+		<p>年龄：{{age}}</p>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+	var htmls = document.getElementById("htmls")
+	var react = document.getElementById("react")
+	var btn = document.getElementById("btn")
+	var ps = document.getElementById("ps")
+	var inps = document.getElementById("inps")
+	var el = document.getElementById("box")
+	var temp = el.innerHTML
+	btn.onclick = function(){
+		let vals = htmls.value
+		if(vals){
+			let newHtmls = vals.replace(/class/g, 'className')
+			react.value = newHtmls
+		}
+
+	}
+	//双向
+	let _data = {
+		name: 'blue',
+		age:20
+	}
+
+	let data = new Proxy(_data,{
+		set(obj,name,value){
+			obj[name] = value
+			render()
+		}
+	})
+
+	render()
+
+	function render(){
+		// 渲染
+		el.innerHTML = temp.replace(/\{\{\w+\}\}/g, function(str){
+			 str = str.substring(2,str.length-2)
+			 return _data[str]
+		})
+		Array.from(el.getElementsByTagName('input')).
+			filter(ins => ins.getAttribute('v-model')).
+			forEach(res=>{
+				let name = res.getAttribute('v-model')
+				res.value = data[name]
+				res.oninput = function(){
+					data[name] = this.value
+				}
+			})
+
+	}
+
+
+</script>
+	

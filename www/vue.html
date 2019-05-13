@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+	
+</body>
+</html>
+
+
+<script type="text/javascript">
+	/* 解决axios post传参的过程中参数拼接问题*/
+	import {stringify} from 'querystring'
+	import Axios from 'axios'
+	Axios.create({
+		transformRequest:[
+			function(data){
+				return stringify(data)
+			}
+		]
+	})
+
+	//动态组件
+	import Base from '@/componets/base'
+	data () {
+		return {
+			type: 'Base'  // 类型为base
+		},
+		components:{
+			Base
+		}
+	}
+	<template>
+		<div>
+			<component :is="type" />   等价于   <Base />
+		</div>
+	</template>
+	//动态组件
+	
+	 
+	/*router*/
+	import Vue from 'vue'
+	import Router from 'vue-router' 
+	import Index from '@/comonents/index'
+	Vue.use(Router)
+	export default new Router({
+		path: '/',
+		component: Index
+	})
+
+	main.js
+	import route form './router/index'
+
+	// 然后挂在到app上面
+	/*router*/
+
+
+	/*webpack*/
+	packahe.json 文件夹下进行配置
+
+	"scripts": {
+	    "dev": "node build/dev-server.js --dev.development",
+	    "build": "node build/build.js --dev.production",
+	 },
+
+	development.js
+	const htmlWebpackPlugin = require('html-webpack-plugin')
+	module.exports = {
+		mode: 'development',
+		output:{
+			filename:'bundle.js'
+		},
+		devtool: 'source-map',
+		plugins:[
+			new htmlWebpackPlugin({
+				template: 'index.html'
+			})
+		]
+	}
+
+	production.js
+
+	const htmlWebpackPlugin = require('html-webpack-plugin')
+	module.exports = {
+		mode: 'development',
+		output:{
+			filename:path.resolve(__dirname, '../dist/boundle.min.js') //找到根目录
+		},
+		devtool: 'source-map',
+		plugins:[
+			new htmlWebpackPlugin({
+				template: 'index.html'
+			})
+		]
+	}
+
+
+	webpack.config.js文件下配置
+
+	const path = require('path')
+	const production =  require './production'
+	const development =  require './development'
+
+	modules.export =function (evn, argv) {
+		env = {} || env
+		...evn === 'production' ? production : development
+		entry: './main.js'
+		output: path.resolve(__dirname, './dist/bounld.js'),
+		module:{
+			rules:[
+				{test:'/\.js$/i', use:[]},
+				{test:'/\.(scss|less|css)$/i', use:['vue-style-loader', 'css-loader', 'sass-loader', 'less-loader']},
+				{test:'/\.vue$/i', use:['vue-loader']},
+				{test:'/\.(eot|svg|woff|woff2)$/i', use:'file-loader'}
+			]
+		},
+		resolve: {
+			alias:{
+				'vue$': 'vue/dist/vue.esm',
+				'@': resolve(src) 
+			}
+		}
+	}
+
+	配置SSH 秘钥
+
+		git config --global user.name 'zz'
+		git config --global user.email '你的邮箱'
+
+	生成秘钥
+
+		ssh-keygen -t -rsa -C '你的邮箱'  三下回车
+
+	然后查看文件目录 会生成 三个文件  
+
+		id_rsa  id_rsa.pub known_hosts
+
+	打开 id_rsa.pub文件，复制里面的内容去github或者gitlab进行添加SSH
+
+
+	vuex
+	import Vue from 'vue' 
+	import Vuex from 'vuex'
+	Vue.use(Vuex)
+
+	const store = new Vuex.Store({
+		strict: process.evn.NODE_EVN != 'production'  // 开发中为false，发布版本为true
+	})
+
+
+
+</script>

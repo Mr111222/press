@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>我是1ejs</title>
+</head>
+<body>
+	<% if(modObj){%>
+		<form action="/menu/add" method="post">
+			<input type="hidden" name="id" value="<%= modObj.id %>">
+			名称： <input type="text" name="name"  value="<%= modObj.name %>"><br>	
+			价格： <input type="text" name="price" value="<%= modObj.price%>"><br>
+			<input type="submit" value="提交">
+		</form>
+	<%}else{%>
+		<form action="/menu/add" method="post">
+			名称： <input type="text" name="name" ><br>	
+			价格： <input type="text" name="price"><br>
+			<input type="submit" value="提交">
+		</form>
+	<%}%>
+
+
+	<div class="box">
+		<table width="400" border="1" style="text-align: center;">
+			<thead>
+				<tr>
+					<td>食品名称</td>
+					<td>食品价格</td>
+					<td style="width:90px">操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<% for(var i=0;i<data.length;i++){%>
+				<tr>
+					<td><%= data[i].name %></td>
+					<td><%= data[i].price %></td>
+					<td ><a href="?act=mod&id=<%=data[i].id%>">修改</a>&nbsp&nbsp<a href="?act=del&id=<%=data[i].id%>">删除</a></td>
+				</tr>	
+				<%}%>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
+<style type="text/css">
+	.box{
+		width:400px;
+		height:400px;
+		margin:20px auto;
+	}
+</style>
