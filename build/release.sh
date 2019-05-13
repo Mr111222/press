@@ -20,7 +20,7 @@ then
   npm version $VERSION --message "[release] $VERSION"
 
   if [[ $VERSION =~ "beta" ]]
-    console.log('sssssss')
+    echo $VERSION
   then
     npm publish --tag beta
   else
