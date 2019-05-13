@@ -16,7 +16,7 @@ echo "输入分支"
 
 read $branch
 
-git push -u origin branch
+git push -u origin $branch
 
 sleep 2
 
