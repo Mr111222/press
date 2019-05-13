@@ -4,7 +4,7 @@ echo $nowGMT
 var=`date "+%Y-%m-%d-%H-%M-%S"`
 echo $var
 #1.
-git init
+# git init
 #2.
 git add ./
 #3.
@@ -15,4 +15,5 @@ git remote add origin https://github.com/Mr111222/express1.git
 git push -u origin master
 
 sleep 1
+
 clear || cls
