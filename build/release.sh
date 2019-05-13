@@ -13,14 +13,14 @@ then
   echo "Releasing $VERSION ..."
 
   # build
-  VERSION=$VERSION 
-  # npm run dist
+  VERSION=$VERSION
 
-  # publish theme
-  echo "Releasing theme-chalk $VERSION ..."
-  # cd packages/theme-chalk
+  echo "Releasing $VERSION ..."
+
   npm version $VERSION --message "[release] $VERSION"
+
   if [[ $VERSION =~ "beta" ]]
+    console.log('sssssss')
   then
     npm publish --tag beta
   else
@@ -33,12 +33,6 @@ then
   git commit -m "[build] $VERSION"
   npm version $VERSION --message "[release] $VERSION"
 
-  # publish
-  git push eleme master
-  git push eleme refs/tags/v$VERSION
-  git checkout dev
-  git rebase master
-  git push eleme dev
 
   if [[ $VERSION =~ "beta" ]]
   then
