@@ -18,6 +18,10 @@ then
 
   echo "Releasing $VERSION ......"
 
+
+  # npm run build  dist 
+  # cd dist
+
   npm version $VERSION --message "[release] $VERSION"
 
   if [[ $VERSION =~ "beta" ]]
@@ -28,6 +32,10 @@ then
   fi
 fi
 
+# cd ../
+
+# npm version $VERSION --message "[release] $VERSION"
+
 git push origin master
 
 sleep 2
@@ -35,6 +43,8 @@ sleep 2
 clear || cls
 
 git checkout dev 
+git rebase master
+git push eleme dev
 
 
 
