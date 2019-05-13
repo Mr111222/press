@@ -17,9 +17,6 @@ then
 
   echo "Releasing $VERSION ..."
 
-
-  git commit -m "[build] $VERSION"
-
   npm version $VERSION --message "[release] $VERSION"
 
   if [[ $VERSION =~ "beta" ]]
