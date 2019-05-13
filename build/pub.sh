@@ -14,6 +14,6 @@ git remote add origin https://github.com/Mr111222/express1.git
 #5.
 git push -u origin master
 
-sleep 1
+sleep 2
 
 clear || cls
