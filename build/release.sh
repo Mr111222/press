@@ -44,7 +44,7 @@ clear || cls
 
 git checkout dev 
 git rebase master
-git push eleme dev
+git push origin dev
 
 
 
