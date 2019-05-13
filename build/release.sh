@@ -17,22 +17,10 @@ then
 
   echo "Releasing $VERSION ..."
 
-  npm version $VERSION --message "[release] $VERSION"
 
-  if [[ $VERSION =~ "beta" ]]
-    echo $VERSION
-  then
-    npm publish --tag beta
-  else
-    npm publish
-  fi
-  cd ../..
-
-  # commit
-  git add -A
   git commit -m "[build] $VERSION"
-  npm version $VERSION --message "[release] $VERSION"
 
+  npm version $VERSION --message "[release] $VERSION"
 
   if [[ $VERSION =~ "beta" ]]
   then
