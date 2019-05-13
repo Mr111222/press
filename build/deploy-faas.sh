@@ -1,12 +1,16 @@
 #! /bin/sh
-set -ex
-mkdir temp_web
+
+# set -ex
+
+# mkdir temp_web 
+
 # npm run deploy:build
-cd temp_web
 
-git push origin master
+# cd temp_web
 
-git clone --depth 1 -b gh-pages --single-branch https://github.com/Mr111222/press.git && cd press
+# git push origin master
+
+# git clone --depth 1 -b gh-pages --single-branch https://github.com/Mr111222/press.git && cd press
 
 # # build sub folder
 # SUB_FOLDER='2.8'
