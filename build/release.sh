@@ -45,6 +45,7 @@ then
   # publish theme
   echo "Releasing theme-chalk $VERSION ...????"
   cd packages/theme-chalk
+  echo "enter theme-chalk"
   npm version $VERSION --message "[release] $VERSION"
   # if [[ $VERSION =~ "beta" ]]
   # then
@@ -53,7 +54,7 @@ then
   #   npm publish
   # fi
   cd ../..
-
+  echo "enter root"
   npm version $VERSION --message "[release] $VERSION"
 
   # commit
