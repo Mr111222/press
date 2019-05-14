@@ -7,10 +7,10 @@ cd temp_web
 git clone --depth 1 -b gh-pages --single-branch https://github.com/Mr111222/press.git && cd press
 
 # build sub folder
-SUB_FOLDER='2.8'
-mkdir -p $SUB_FOLDER
-rm -rf *.js *.css *.map static
-rm -rf $SUB_FOLDER/**
+# SUB_FOLDER='2.8'
+# mkdir -p $SUB_FOLDER
+# rm -rf *.js *.css *.map static
+# rm -rf $SUB_FOLDER/**
 # cp -rf ../../examples/element-ui/** .
 # cp -rf ../../examples/element-ui/** $SUB_FOLDER/
 # cd ../..
