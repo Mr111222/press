@@ -43,7 +43,7 @@ then
   npm run dist
 
   # publish theme
-  echo "Releasing theme-chalk $VERSION ..."
+  echo "Releasing theme-chalk $VERSION ...????"
   cd packages/theme-chalk
   npm version $VERSION --message "[release] $VERSION"
   # if [[ $VERSION =~ "beta" ]]
@@ -64,7 +64,7 @@ then
   # fi
 fi
 
-# git push origin master
+git push origin master
 
 # sleep 2
 
