@@ -46,27 +46,27 @@ then
   echo "Releasing theme-chalk $VERSION ..."
   cd packages/theme-chalk
   npm version $VERSION --message "[release] $VERSION"
-  if [[ $VERSION =~ "beta" ]]
-  then
-    npm publish --tag beta
-  else
-    npm publish
-  fi
+  # if [[ $VERSION =~ "beta" ]]
+  # then
+  #   npm publish --tag beta
+  # else
+  #   npm publish
+  # fi
   cd ../..
 
   npm version $VERSION --message "[release] $VERSION"
 
-  if [[ $VERSION =~ "beta" ]]
-  then
-    npm publish --tag beta
-  else
-    npm publish
-  fi
+  # if [[ $VERSION =~ "beta" ]]
+  # then
+  #   npm publish --tag beta
+  # else
+  #   npm publish
+  # fi
 fi
 
-git push origin master
+# git push origin master
 
-sleep 2
+# sleep 2
 
 # clear || cls
 
