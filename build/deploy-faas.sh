@@ -1,4 +1,5 @@
 #! /bin/sh
+echo 'enter faas'
 set -ex
 mkdir temp_web
 npm run deploy:build
