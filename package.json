@@ -9,7 +9,6 @@
     "packages",
     "types"
   ],
-  "typings": "types/index.d.ts",
   "scripts": {
     "bootstrap": "yarn || npm i",
     "build:file": "node build/bin/iconInit.js & node build/bin/build-entry.js & node build/bin/i18n.js & node build/bin/version.js",
@@ -44,9 +43,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:ElemeFE/element.git"
+    "url": "localhost:8080"
   },
-  "homepage": "http://element.eleme.io",
+  "homepage": "localhost:8080",
   "keywords": [
     "eleme",
     "vue",
@@ -54,7 +53,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ElemeFE/element/issues"
+    "url": "localhost:8080"
   },
   "unpkg": "lib/index.js",
   "style": "lib/theme-chalk/index.css",
