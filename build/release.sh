@@ -68,11 +68,11 @@ git push origin master
 
 sleep 2
 
-clear || cls
+# clear || cls
 
-git checkout dev 
-git rebase master
-git push origin dev
+# git checkout dev 
+# git rebase master
+# git push origin dev
 
 
 
