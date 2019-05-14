@@ -21,6 +21,7 @@ import icon from './icon.json';
 
 // use ucap ui
 Vue.use(CbUI)
+console.log(CbUI);
 Vue.use(Element);
 Vue.use(VueRouter);
 Vue.component('demo-block', demoBlock);
