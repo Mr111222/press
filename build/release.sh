@@ -56,18 +56,16 @@ then
 
   npm version $VERSION --message "[release] $VERSION"
 
-
   # commit
-    git add -A
-    git commit -m "[build] $VERSION"
-    npm version $VERSION --message "[release] $VERSION"
-
-    # publish
-    git push origin master
-    git push origin refs/tags/v$VERSION
-    git checkout dev
-    git rebase master
-    git push origin dev
+  git add -A
+  git commit -m "[build] $VERSION"
+  
+  # publish
+  git push origin master
+  git push origin refs/tags/v$VERSION
+  git checkout dev
+  git rebase master
+  git push origin dev
 
   # if [[ $VERSION =~ "beta" ]]
   # then
@@ -91,3 +89,4 @@ fi
 
 
 
+g

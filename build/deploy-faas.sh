@@ -3,7 +3,7 @@ set -ex
 mkdir temp_web
 npm run deploy:build
 cd temp_web
-git clone --depth 1 -b gh-pages --single-branch https://github.com/Mr111222/express1.git && cd press
+git clone --depth 1 -b gh-pages --single-branch https://github.com/Mr111222/press.git && cd press
 
 # build sub folder
 SUB_FOLDER='2.8'
@@ -19,7 +19,7 @@ cd ../..
 # rm -rf temp_web
 
 
-git checkout dev 
-git rebase master
-git push origin dev
-clear || cls
+# git checkout dev 
+# git rebase master
+# git push origin dev
+# clear || cls
