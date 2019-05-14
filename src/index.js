@@ -184,8 +184,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '2.8.2',
-  pps: 'entry file',
+  version: '0.0.1',
   locale: locale.use,
   i18n: locale.i18n,
   install,
