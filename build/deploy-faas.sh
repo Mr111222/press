@@ -11,9 +11,11 @@ SUB_FOLDER='2.8'
 mkdir -p $SUB_FOLDER
 rm -rf *.js *.css *.map static
 rm -rf $SUB_FOLDER/**
-cp -rf ../../examples/element-ui/** .
-cp -rf ../../examples/element-ui/** $SUB_FOLDER/
-cd ../..
+# cp -rf ../../examples/element-ui/** .
+# cp -rf ../../examples/element-ui/** $SUB_FOLDER/
+# cd ../..
+
+echo 'pps end'
 
 # deploy domestic site
 # faas deploy alpha -P element
