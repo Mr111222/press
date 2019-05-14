@@ -55,12 +55,11 @@ then
   # fi
   cd ../..
   echo "enter root"
-  npm version $VERSION --message "[release] $VERSION"
-
   # commit
   git add -A
   git commit -m "[build] $VERSION"
-  
+  npm version $VERSION --message "[release] $VERSION"
+
   # publish
   git push origin master
   git push origin refs/tags/v$VERSION
