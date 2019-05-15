@@ -2,7 +2,7 @@
 echo 'enter faas'
 set -ex
 mkdir temp_web
-npm run deploy:build
+# npm run deploy:build
 cd temp_web
 git clone --depth 1 -b gh-pages --single-branch https://github.com/Mr111222/press.git && cd press
 
