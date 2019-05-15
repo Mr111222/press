@@ -1,27 +1,3 @@
-#!/usr/bin/env sh
-#   cd ../..
-
-#   # commit
-#   git add -A
-#   git commit -m "[build] $VERSION"
-#   npm version $VERSION --message "[release] $VERSION"
-
-#   # publish
-#   git push eleme master
-#   git push eleme refs/tags/v$VERSION
-#   git checkout dev
-#   git rebase master
-#   git push eleme dev
-
-#   if [[ $VERSION =~ "beta" ]]
-#   then
-#     npm publish --tag beta
-#   else
-#     npm publish
-#   fi
-# fi
-
-
 
 #!/usr/bin/env sh
 set -e
@@ -43,23 +19,28 @@ then
   npm run dist
 
   # publish theme
-  echo "Releasing theme-chalk $VERSION ...????"
+  echo "Releasing theme-chalk $VERSION ..........."
   cd packages/theme-chalk
   echo "enter theme-chalk"
   npm version $VERSION --message "[release] $VERSION"
-  # if [[ $VERSION =~ "beta" ]]
-  # then
-  #   npm publish --tag beta
-  # else
-  #   npm publish
-  # fi
+  if [[ $VERSION =~ "beta" ]]
+  then
+    npm publish --tag beta
+  else
+    npm publish
+  fi
   cd ../..
   echo "enter root"
   # commit
   git add -A
   git commit -m "[build] $VERSION"
   npm version $VERSION --message "[release] $VERSION"
-
+  if [[ $VERSION =~ "beta" ]]
+  then
+    npm publish --tag beta
+  else
+    npm publish
+  fi
   # publish
   git push origin master
   git push origin refs/tags/v$VERSION
@@ -67,21 +48,17 @@ then
   git rebase master
   git push origin dev
 
-  # if [[ $VERSION =~ "beta" ]]
-  # then
-  #   npm publish --tag beta
-  # else
-  #   npm publish
-  # fi
+  if [[ $VERSION =~ "beta" ]]
+  then
+    npm publish --tag beta
+  else
+    npm publish
+  fi
 fi
 
-# git push origin master
 
-# sleep 2
 
-# clear || cls
 
-# git checkout dev 
-# git rebase master
-# git push origin dev
+
+
 
