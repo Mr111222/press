@@ -1,0 +1,9 @@
+{
+  "cb-titles": {
+    "description": "CbTitles",
+		"prefix": "cb-titles",
+		"body": [
+			"<CbTitles title=\"${1}\" subtitle=\"${2}\" :links=\"${3}\" color=\"${4}\" subcolor=\"${5}\" size=\"${6}\" borcolor=\"${7}\" subborcolor=\"${8}\" linkcolor=\"${9}\" linksize=\"${10}\" subsize=\"${11}\"></CbTitles>"
+		]
+	}
+}

@@ -1,0 +1,27 @@
+{
+  "cb-titles": {
+    "description": "CbTitles",
+		"prefix": "cb-titles",
+		"body": [
+			"CbTitles$0(",
+			"\ttitle=\"${1}\"",
+			"\tsubtitle=\"${2}\"",
+			"\t:links=\"${3}\"",
+			"\tcolor=\"${4}\"",
+			"\tsubcolor=\"${5}\"",
+			"\tsize=\"${6}\"",
+			"\tborcolor=\"${7}\"",
+			"\tsubborcolor=\"${8}\"",
+			"\tlinkcolor=\"${9}\"",
+			"\tlinksize=\"${10}\"",
+			"\tsubsize=\"${11}\"",
+			")/"
+		]
+	}
+}
+
+
+
+
+
+
