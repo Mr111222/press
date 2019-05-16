@@ -75,8 +75,6 @@ const registerRoute = (navConfig) => {
 
 let route = registerRoute(navConfig);
 
-
-// 
 const generateMiscRoutes = function(lang) {
   let guideRoute = {
     path: `/${ lang }/guide`, // 指南
@@ -133,13 +131,11 @@ const generateMiscRoutes = function(lang) {
 langs.forEach(lang => {
   route = route.concat(generateMiscRoutes(lang.lang));
 });
-
 // route.push({
 //   path: '/play',
 //   name: 'play',
 //   component: require('./play/index.vue')
 // });
-
 let defaultPath = '/zh-CN';
 
 route = route.concat([{

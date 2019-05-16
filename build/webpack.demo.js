@@ -16,11 +16,11 @@ const isPlay = !!process.env.PLAY_ENV;
 const webpackConfig = {
   mode: process.env.NODE_ENV,
   entry: isProd ? {
-    docs: './ddd/entry.js',
+    docs: './examples/entry.js',
     'element-ui': './src/index.js'
-  } : (isPlay ? './ddd/play.js' : './ddd/entry.js'),
+  } : (isPlay ? './examples/play.js' : './examples/entry.js'),
   output: {
-    path: path.resolve(process.cwd(), './ddd/element-ui/'),
+    path: path.resolve(process.cwd(), './examples/element-ui/'),
     publicPath: process.env.CI_ENV || '',
     filename: '[name].[hash:7].js',
     chunkFilename: isProd ? '[name].[hash:7].js' : '[name].js'
@@ -51,16 +51,21 @@ const webpackConfig = {
       //   loader: 'eslint-loader'
       // },
       {
+        test: /\.js$/,
+        loader: "babel-loader",
+        exclude: /node_modules/
+      },
+      {
         test: /\.pug$/,
         oneOf: [
           // this applies to `<template lang="pug">` in Vue components
           {
             resourceQuery: /^\?vue/,
-            use: ['pug-plain-loader']
+            use: ["pug-plain-loader"]
           },
           // this applies to pug imports inside JavaScript
           {
-            use: ['raw-loader', 'pug-plain-loader']
+            use: ["raw-loader", "pug-plain-loader"]
           }
         ]
       },
@@ -102,7 +107,7 @@ const webpackConfig = {
             loader: path.resolve(__dirname, './md-loader/index.js')
           },
           {
-            loader: path.resolve(__dirname, './md-loader/toCb')
+            loader: path.resolve(__dirname, './md-loader/toCb.js')
           }
         ]
       },
@@ -120,12 +125,12 @@ const webpackConfig = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './ddd/index.tpl',
+      template: './examples/index.tpl',
       filename: './index.html',
-      favicon: './ddd/favicon.ico'
+      favicon: './examples/favicon.ico'
     }),
     new CopyWebpackPlugin([
-      { from: 'ddd/versions.json' }
+      { from: 'examples/versions.json' }
     ]),
     new ProgressBarPlugin(),
     new VueLoaderPlugin(),
