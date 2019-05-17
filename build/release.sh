@@ -17,16 +17,16 @@ then
 
   # publish theme
   echo "Releasing theme-chalk $VERSION ..."
-  # cd packages/theme-chalk
-  # echo 'enter theme-chalk...'
-  # npm version $VERSION --message "[release] $VERSION"
-  # if [[ $VERSION =~ "beta" ]]
-  # then
-  #   npm publish --tag beta
-  # else
-  #   npm publish
-  # fi
-  # cd ../..
+  cd packages/theme-chalk
+  echo 'enter theme-chalk...'
+  npm version $VERSION --message "[release] $VERSION"
+  if [[ $VERSION =~ "beta" ]]
+  then
+    npm publish --tag beta
+  else
+    npm publish
+  fi
+  cd ../..
   echo 'enter root...'
   # commit
   git add -A
