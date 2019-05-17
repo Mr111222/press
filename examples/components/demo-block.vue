@@ -96,6 +96,9 @@
     .highlight {
       pre {
         margin: 0;
+        .framework{
+          color:#3182bd;
+        }
       }
       code.hljs {
         margin: 0;

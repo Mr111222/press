@@ -77,8 +77,6 @@ import Image from '../packages/image/index.js';
 import Calendar from '../packages/calendar/index.js';
 import locale from 'element-ui/src/locale';
 import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
-// new add
-import Title from '../packages/title/src/main.js';
 
 const components = [
   Pagination,
@@ -152,8 +150,7 @@ const components = [
   Divider,
   Image,
   Calendar,
-  CollapseTransition,
-  Title
+  CollapseTransition
 ];
 
 const install = function(Vue, opts = {}) {
@@ -266,6 +263,5 @@ export default {
   Link,
   Divider,
   Image,
-  Calendar,
-  Title
+  Calendar
 };

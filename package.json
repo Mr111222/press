@@ -72,13 +72,13 @@
     "resize-detector": "^0.2.0",
     "resize-observer-polyfill": "^1.5.0",
     "throttle-debounce": "^1.0.1",
-    "vue-markdown-loader": "^2.4.1"
+    "vue-markdown-loader": "^2.4.1",
+    "vue-ufp-ui": "^0.8.0"
   },
   "peerDependencies": {
     "vue": "^2.5.17"
   },
   "devDependencies": {
-    "vue-ufp-ui": "^0.8.0",
     "@vue/component-compiler-utils": "^2.6.0",
     "algoliasearch": "^3.24.5",
     "babel-cli": "^6.26.0",

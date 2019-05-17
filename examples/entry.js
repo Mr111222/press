@@ -20,7 +20,7 @@ import './assets/styles/fonts/style.css';
 import icon from './icon.json';
 
 // use ucap ui
-// Vue.use(CbUI)
+Vue.use(CbUI)
 Vue.use(Element);
 Vue.use(VueRouter);
 Vue.component('demo-block', demoBlock);
