@@ -1,8 +1,0 @@
-{
-  "name": "vue-ufp-ui-title",
-  "private": true,
-  "description": "vue-ufp-ui-title",
-  "version": "0.0.3",
-  "main": "../../libs/title.umd.min.js",
-  "module": "./src/main.js"
-}
