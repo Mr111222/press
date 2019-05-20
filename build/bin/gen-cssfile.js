@@ -27,7 +27,6 @@ themes.forEach((theme) => {
       fs.writeFileSync(filePath, '', 'utf8');
       console.log(theme, ' 创建遗漏的 ', fileName, ' 文件');
     }
-    console.log(indexContent, key)
   });
   fs.writeFileSync(path.resolve(basepath, theme, 'src', isSCSS ? 'index.scss' : 'index.css'), indexContent);
 });
