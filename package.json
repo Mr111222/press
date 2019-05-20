@@ -26,7 +26,8 @@
     "test": "npm run lint && npm run build:theme && cross-env CI_ENV=/dev/ BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test:watch": "npm run build:theme && cross-env BABEL_ENV=test karma start test/unit/karma.conf.js",
     "push": "sh build/push.sh",
-    "fa": "sh build/deploy-faas.sh"
+    "fa": "sh build/deploy-faas.sh",
+    "css": "node build/bin/gen-cssfile.js"
   },
   "faas": [
     {
