@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 set -e
-npm use npm
+nrm use npm
 git checkout master
 git merge dev
 
