@@ -24,7 +24,6 @@ themes.forEach((theme) => {
     indexContent += '@import "./' + fileName + '";\n';
     var filePath = path.resolve(basepath, theme, 'src', fileName);
     if (!fileExists(filePath)) {
-      console.log('xxxx');
       fs.writeFileSync(filePath, '', 'utf8');
       console.log(theme, ' 创建遗漏的 ', fileName, ' 文件');
     }
