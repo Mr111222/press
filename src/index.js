@@ -77,10 +77,8 @@ import Image from '../packages/image/index.js';
 import Calendar from '../packages/calendar/index.js';
 import locale from 'element-ui/src/locale';
 import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
-import Title from '../packages/title/src/main.js';
 
 const components = [
-  Title,
   Pagination,
   Dialog,
   Autocomplete,
@@ -186,8 +184,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '0.0.16',
-  Title,
+  version: '0.0.17',
   locale: locale.use,
   i18n: locale.i18n,
   install,
