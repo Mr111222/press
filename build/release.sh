@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 set -e
-nrm use npm
 git checkout master
 git merge dev
 
