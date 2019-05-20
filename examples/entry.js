@@ -22,6 +22,7 @@ import icon from './icon.json';
 // use ucap ui
 // Vue.use(CbUI)
 Vue.use(Element);
+console.log(Element);
 Vue.use(VueRouter);
 Vue.component('demo-block', demoBlock);
 Vue.component('main-footer', MainFooter);

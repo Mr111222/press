@@ -1,4 +1,4 @@
-import CbTitles from './components/title.vue';
+import CbTitles from './src/components/title.vue';
 
 let install = CbTitles.install = function(Vue, options = {}) {
   if (install.installed) return;

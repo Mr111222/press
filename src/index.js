@@ -76,9 +76,11 @@ import Divider from '../packages/divider/index.js';
 import Image from '../packages/image/index.js';
 import Calendar from '../packages/calendar/index.js';
 import locale from 'element-ui/src/locale';
+import Titles from '../packages/titles/index.js';
 import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
 
 const components = [
+  Titles,
   Pagination,
   Dialog,
   Autocomplete,
@@ -259,6 +261,7 @@ export default {
   Main,
   Footer,
   Timeline,
+  Titles,
   TimelineItem,
   Link,
   Divider,
