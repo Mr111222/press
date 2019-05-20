@@ -1,6 +1,6 @@
 {
   "name": "sok888888theme",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "Element component chalk theme.",
   "main": "lib/index.css",
   "style": "lib/index.css",
